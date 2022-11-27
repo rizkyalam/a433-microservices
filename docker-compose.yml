@@ -1,0 +1,33 @@
+# menggunakan docker compose version 3
+version: '3'
+
+# inisialisasi pembuatan services atau container
+services:
+  # membuat services atau container bernama item-app untuk aplikasi web berbasis node js
+  item-app:
+    # mengunduh image item-app:v1 dari ghcr.io dengan user rizkyalam
+    image: ghcr.io/rizkyalam/item-app:v1
+    # Menerapkan restart policy pada berkas docker-compose.yml agar container selalu restart ketika terhenti
+    restart: always
+    # ekspos port pada host menjadi 80
+    ports:
+      - 80:8080
+    # memastikan item-app hanya berjalan setelah item-db diluncurkan
+    depends_on:
+      - item-db
+
+  # membuat services atau container bernama item-db untuk database menggunakan mongodb
+  item-db:
+    # mengambil image mongodb versi 3 dari lokal 
+    # jika tak ada maka akan mengunduhnya dari docker hub
+    image: mongo:3
+    # Menerapkan restart policy pada berkas docker-compose.yml agar container selalu restart ketika terhenti
+    restart: always
+    # menggunakan volume app-db untuk menyimpan database
+    volumes:
+      - app-db:/data/db
+
+# inisialisasi pembuatan volumes
+volumes:
+  # membuat volume bernama app-db
+  app-db:
