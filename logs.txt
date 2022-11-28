@@ -1,0 +1,24 @@
+   * Executing task: docker compose -f "a433-microservices\docker-compose.yml" up -d --build 
+
+[+] Running 14/14
+ - item-db Pulled                                                                                                                                                                          196.9s
+   - 92473f7ef455 Pull complete                                                                                                                                                             86.7s
+   - fb52bde70123 Pull complete                                                                                                                                                             86.8s
+   - 64788f86be3f Pull complete                                                                                                                                                             86.9s
+   - 33f6d5f2e001 Pull complete                                                                                                                                                             87.0s
+   - 570e56656608 Pull complete                                                                                                                                                             87.2s
+   - f518a872ab12 Pull complete                                                                                                                                                             87.6s
+   - c9bdae151f64 Pull complete                                                                                                                                                             87.7s
+   - b2c58da5f563 Pull complete                                                                                                                                                             87.9s
+   - 2928038a6053 Pull complete                                                                                                                                                             87.9s
+   - 29a16c1b79ab Pull complete                                                                                                                                                             88.0s
+   - efec0f86077c Pull complete                                                                                                                                                            191.0s
+   - 261a04726d31 Pull complete                                                                                                                                                            191.0s
+   - 7c4062426e72 Pull complete                                                                                                                                                            191.1s
+[+] Running 4/4
+ - Network a433-microservices_default       Created                                                                                                                                          0.1s 
+ - Volume "a433-microservices_app-db"       Created                                                                                                                                          0.0s
+ - Container a433-microservices-item-db-1   Started                                                                                                                                          1.3s 
+ - Container a433-microservices-item-app-1  Started                                                                                                                                          1.7s
+ *  Terminal will be reused by tasks, press any key to close it.
+ 
